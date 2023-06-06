@@ -15,5 +15,48 @@
     </style>
   </head>
 
-  <body></body>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Persoal information</legend>
+      <label for="myEmail">Email: </label>
+      <input type="email" name="myEmail" />
+      <label for="myPassword">Password: </label>
+      <input type="password" name="myPassword" />
+      <label for="myFirstName">First name: </label>
+      <input type="text" name="myFirstName" />
+      <label for="myLastName">Last name: </label>
+      <input type="text" name="myLastName" />
+      <label for="myDob">Date of birth: </label>
+      <input type="date" name="myDob" />
+      <label for="myTnum">Telephone number: </label>
+      <input type="tel" name="mytnum" />
+    </fieldset>
+    <fieldset>
+      <legend>Plan selection</legend>
+      <label for="myPlanSelection">Subscription plan: </label>
+      <select name="myPlanSelection">
+        <option value="Free_Plan">Free Plan</option>
+        <option value="Tier_1">Tier 1 | $10</option>
+        <option value="Tier_2">Tier 2 | $20</option>
+        <option value="Tier_3">Tier 3 | $30</option>
+        <input type="checkbox" name="myProPlan" />
+        <label style="display: inline" for="myProPlan">Pro plan</label>
+      </select>
+    </fieldset>
+      <fieldset>
+        <legend>Credit card information</legend>
+        <label for="myCreditCard">Credit card number: </label>
+        <input type="number" name="myCreditCard" />
+        <label for="myCvc">CVC: </label>
+        <input type="number" name="myCvc" max="999" />
+        <label for="myExpDate">Expiration date: </label>
+        <input type="date" name="myExpDate" />
+        <label for="myAddress">Billing address: </label>
+        <input type="text" name="myAddress" />
+      </fieldset>
+  
+      <button>Submit</button>
+    </form>
+  </body>
 </html>
