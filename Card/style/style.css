@@ -1,33 +1,44 @@
 .card {
-    border: 2px solid grey;
-    width: 20vw;
-    height: 60ch;
-    
+  border: 2px solid lightgray;
+  width: 20vw;
+  height: 60%;
 }
 
 .imcap {
-    position: relative;
-    text-align: center;
-    
+  position: relative;
+  text-align: center;
 }
 
-#imcapT{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: lightgray;
-    
+#imcapT {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: lightgray;
+  font-size: 1.3em;
 }
 
-#myImg{
-    width: 20vw;
+#myImg {
+  width: 20vw;
 }
-
 
 .content {
-    padding: 5%;
+  padding: 0%;
+}
+
+.content div {
+  border-bottom: 1px solid lightgrey;
 }
 
 
+#cardTitle{
+    padding-left: 5%;
+}
+.content p {
+  padding: 0% 5%;
+  
+}
 
+#link2{
+    margin-left: 7%;
+}
