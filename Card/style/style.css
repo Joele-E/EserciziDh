@@ -1,6 +1,33 @@
 .card {
     border: 2px solid grey;
     width: 20vw;
-    position: relative;
+    height: 60ch;
+    
 }
+
+.imcap {
+    position: relative;
+    text-align: center;
+    
+}
+
+#imcapT{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: lightgray;
+    
+}
+
+#myImg{
+    width: 20vw;
+}
+
+
+.content {
+    padding: 5%;
+}
+
+
 
