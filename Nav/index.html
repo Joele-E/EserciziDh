@@ -4,34 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Navbar Test</title>
   </head>
   <body>
     <nav>
-      <ul>
-        <li><h3>Navbar</h3></li>
+      <ul class="navbar">
+        <li id="navTitle">Navbar</li>
         <li>
-          <h5><a href="#">Home</a></h5>
+          <a href="#">Home</a>
         </li>
         <li>
-          <h5><a href="#">Link</a></h5>
+          <a href="#">Link</a>
         </li>
         <li>
-          <h5>
-            <select name="myDropdownMenu">
-              <option>Dropdown</option>
-
-              <option>Item1</option>
-              <option>Item2</option>
-              <option>Item3</option>
-            </select>
-          </h5>
+          <div class="dropDown">
+            <button class="dropBtn">Dropdown <i class="fa fa-caret-down"></i></button>
+            <div class="dropdownLinks">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
         </li>
-        <li><button disabled="disabled">Disabled</button></li>
-        <form>
-          <li><input type="text" name="mySearchBar" placeholder="Search" /></li>
+        <li><button id="disBtn" disabled>Disabled</button></li>
+        <li><form>
+          <input type="text" name="mySearchBar" placeholder="Search" />
           <button>Search</button>
         </form>
+        </li>
       </ul>
     </nav>
   </body>
