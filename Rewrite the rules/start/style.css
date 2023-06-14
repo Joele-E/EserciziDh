@@ -1,18 +1,18 @@
-:root{
-    --bColor1 : #011212;
-    --width : 100px;
-    --height : 100px;
-    --bColor2 : #ff8800;
-    --bRadius : 50px;
+:root {
+  --bColor1: #011212;
+  --width: 100px;
+  --height: 100px;
+  --bColor2: #ff8800;
+  --bRadius: 50px;
 }
 
 body {
-    background-color: var(--bColor1);
+  background-color: var(--bColor1);
 }
 
 .ball {
-    width: var(--width);
-    height: var(--height);
-    background-color: var(--bColor2);
-    border-radius: var(--bRadius);
+  width: var(--width);
+  height: var(--height);
+  background-color: var(--bColor2);
+  border-radius: var(--bRadius);
 }
