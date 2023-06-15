@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between
+}
+
+#yellow {
+  order: 1;
+  margin-left: 0;
+}
+#red {
+  order: 2;
+}
+#green {
+  order: 3;
+}
+
+#orange {
+  order: 4;
+  flex: 1 ;
+}
+#blue {
+  order: 5;
+  margin-right: 0;
+}
