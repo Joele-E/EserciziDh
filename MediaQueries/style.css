@@ -86,20 +86,32 @@ body {
 }
 
 .container {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   justify-content: space-around;
+  grid-template-columns: auto auto auto;
 }
 
-@media screen and (max-width: 1000px) {
-  .container {
-    justify-content: flex-start;
-    gap: 10px 30px;
+@media screen and (max-width: 1040px) {
+  .card {
+    height: 430px;
+    width: 280px;
+  }
+  .card .cardImg img {
+    width: 280px;
+  }
+  .dots {
+    margin-left: 230px;
   }
 }
-@media screen and (max-width: 690px) {
+
+@media screen and (max-width: 850px) {
   .container {
-    justify-content: center;
-    gap: 10px 0px;
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: auto;
   }
 }
