@@ -4,20 +4,17 @@ body {
 }
 
 .card {
-  margin-top: 10px;
-  margin-left: 10px;
-  
+  margin-top: 20px;
   width: 330px;
   height: 470px;
   border-radius: 22px;
   box-shadow: 0 5px 10px -2px #979595;
-  
 }
 
 .card .cardHead {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  display: flex;
+
   border: 3px solid #afafaf;
   background-color: #afafaf;
   height: 45px;
@@ -34,8 +31,8 @@ body {
 
 .card .cardHead .headText {
   display: block;
-
-  margin-left: 7px;
+  margin-top: -40px;
+  margin-left: 50px;
 }
 
 .cardName {
@@ -45,46 +42,63 @@ body {
   color: rgb(217, 215, 215);
   font-size: 12px;
 }
+
+.dots {
+  position: relative;
+  font-weight: bold;
+  font-size: 40px;
+  margin-left: 280px;
+  margin-top: -50px;
+}
+
 .card .cardImg img {
   width: 330px;
   z-index: -1;
   margin-bottom: 0;
-  
 }
-.cardDesc{
+.cardDesc {
   /* background-color: #eeeeee; */
   background-color: #eaeaea;
   height: 147px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   padding-left: 5px;
- 
 }
 
-.cardInteractions{
+.cardInteractions {
   background-color: #eaeaea;
   margin-top: -5px;
   padding-top: 20px;
   padding-left: 15px;
   padding-bottom: 10px;
-  
 }
 
-.intHeart, .intBubble {
+.intHeart,
+.intBubble {
   width: 15px;
   height: 15px;
   margin-left: 10px;
 }
-
-
 
 .descFirstWord {
   font-weight: bold;
 }
 
 .container {
-  display: inline;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-.container .card{
- 
+
+@media screen and (max-width: 1000px) {
+  .container {
+    justify-content: flex-start;
+    gap: 10px 30px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .container {
+    justify-content: center;
+    gap: 10px 0px;
+  }
 }
