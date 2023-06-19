@@ -3,23 +3,30 @@
   padding: 1.5%;
 }
 
+.navbar .myHamburger {
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar {
+  display: flex;
+}
+
 .navbar li,
 .navbar li form {
-  display: inline;
   margin: 1%;
 }
 
 .navbar li form {
-  position: relative;
-  bottom: 1.2vh;
+  position: absolute;
+  margin-top: -0.7vh;
   float: right;
   right: 5%;
-  
-  top: -15px;
 }
 .navbar li form button {
   position: relative;
-  display: inline;
   border: 1px solid #04aa6d;
   color: #04aa6d;
   text-decoration: none;
@@ -31,7 +38,6 @@
   cursor: pointer;
   margin-left: 7px;
   border-radius: 3px;
-  
 }
 .navbar li form button:hover {
   background-color: #04aa6d;
@@ -91,4 +97,22 @@ nav ul {
   border: none;
   background-color: #333333;
   color: rgb(143, 133, 133);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar li {
+    display: none;
+  }
+  #navTitle {
+    display: block;
+    margin-right: auto;
+  }
+  .navbar {
+    justify-content: flex-end;
+  }
+  .navbar .myHamburger {
+    display: inline;
+    margin-top: 17%;
+    margin-right: 2vw;
+  }
 }

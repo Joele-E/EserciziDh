@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Navbar Test</title>
-  </head>
-  <body>
-    <nav>
-      <ul class="navbar">
-        <li id="navTitle">Navbar</li>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">Link</a>
-        </li>
-        <li>
-          <div class="dropDown">
-            <button class="dropBtn">Dropdown <i class="fa fa-caret-down"></i></button>
-            <div class="dropdownLinks">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Navbar Responsive</title>
+</head>
+
+<body>
+  <nav>
+    <ul class="navbar">
+      <li id="navTitle">Navbar</li>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">Link</a>
+      </li>
+      <li>
+        <div class="dropDown">
+          <button class="dropBtn">Dropdown <i class="fa fa-caret-down"></i></button>
+          <div class="dropdownLinks">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
           </div>
-        </li>
-        <li><button id="disBtn" disabled>Disabled</button></li>
-        <li><form>
+        </div>
+      </li>
+      <li><button id="disBtn" disabled>Disabled</button></li>
+      <li>
+        <form>
           <input type="text" name="mySearchBar" placeholder="Search" />
           <button>Search</button>
         </form>
-        </li>
-      </ul>
-    </nav>
-  </body>
+      </li>
+
+      <div class="hamburger">
+        <img src="assets/menu-icon.svg" alt="menu icon" class="myHamburger">
+      </div>
+
+    </ul>
+  </nav>
+</body>
+
 </html>
