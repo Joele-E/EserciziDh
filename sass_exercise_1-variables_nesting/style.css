@@ -1,0 +1,22 @@
+div {
+  border: 1px solid red;
+}
+div h1 {
+  color: green;
+  text-decoration: underline;
+  text-decoration-color: blue;
+  text-align: center;
+}
+div section {
+  border: 1px solid green;
+  display: flex;
+  margin: 15px;
+}
+div section article {
+  border: 1px solid green;
+  text-align: center;
+  color: blue;
+}
+div section article:nth-child(even) {
+  color: red;
+}/*# sourceMappingURL=style.css.map */
