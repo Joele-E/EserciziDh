@@ -1,0 +1,34 @@
+div {
+  border: 1px solid red;
+}
+div h1 {
+  color: green;
+  text-decoration: underline;
+  text-decoration-color: blue;
+  text-decoration-thickness: 2px;
+  text-align: center;
+}
+div section {
+  margin: 15px;
+  display: flex;
+  font-size: 1rem;
+}
+div section article {
+  border: 1px solid green;
+  text-align: center;
+  color: blue;
+}
+div section article:nth-child(even) {
+  color: red;
+}
+div section.footer_section {
+  justify-content: center;
+  display: flex;
+}
+div section.footer_section article {
+  color: green;
+  border-color: blue;
+  font-size: 24px;
+  padding: 10px 5px;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
