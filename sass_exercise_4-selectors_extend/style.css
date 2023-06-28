@@ -1,12 +1,18 @@
 div {
   border: 0.0625rem solid red;
 }
-div .main_title {
+div .main_title, div .secondary_title {
   color: green;
   text-decoration: underline;
   text-decoration-color: blue;
   text-decoration-thickness: 0.125rem;
   text-align: center;
+}
+div .secondary_title {
+  padding: 1rem;
+  border: 0.0625rem solid red;
+  width: 20vw;
+  margin-left: 38vw;
 }
 div section {
   margin: 0.9375rem;
