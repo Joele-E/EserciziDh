@@ -1,0 +1,45 @@
+@use "module.scss";
+@use "functions.scss" as f;
+
+@mixin article-card($color: #000, $border-color: #000, $font-size: 1rem) {
+    color: $color;
+    border-color: $border-color;
+    font-size: $font-size;
+  }
+  
+  div {
+    border: f.rem-calc(1) solid module.$color-primary;
+    h1 {
+      color: module.$color-secondary;
+      text-decoration: underline;
+      text-decoration-color: module.$color-tertiary;
+      text-decoration-thickness: f.rem-calc(2);
+      text-align: center;
+    }
+    section {
+      margin: f.rem-calc(15);
+      display: flex;
+      font-size: 1rem;
+  
+      article {
+        border: f.rem-calc(1) solid module.$color-secondary;
+        text-align: center;
+        color: module.$color-tertiary;
+        &:nth-child(even) {
+          color: module.$color-primary;
+        }
+      }
+      &.footer_section {
+        justify-content: center;
+        display: flex;
+        article {
+          @include article-card(module.$color-secondary, module.$color-tertiary, 24px);
+          padding: f.rem-calc(10) f.rem-calc(5);
+          width: 100%;
+        }
+      }
+    }
+  }
+
+
+
