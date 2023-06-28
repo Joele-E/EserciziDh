@@ -13,6 +13,7 @@ div .secondary_title {
   border: 0.0625rem solid red;
   width: 20vw;
   margin-left: 38vw;
+  text-decoration: none;
 }
 div section {
   margin: 0.9375rem;
