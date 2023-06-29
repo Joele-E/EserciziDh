@@ -1,0 +1,88 @@
+@use "module.scss";
+@use "functions.scss" as f;
+
+@use "sass:color";
+
+@mixin article-card($color: #000, $border-color: #000, $font-size: 1rem) {
+  color: $color;
+  border-color: $border-color;
+  font-size: $font-size;
+}
+
+div {
+  border: f.rem-calc(1) solid module.$color-primary;
+  & .main_title {
+    color: module.$color-secondary;
+    text-decoration: underline;
+    text-decoration-color: module.$color-tertiary;
+    text-decoration-thickness: f.rem-calc(2);
+    text-align: center;
+  }
+
+  & .secondary_title {
+    @extend .main_title;
+    padding: 1rem;
+    border: f.rem-calc(1) solid module.$color-primary;
+    width: 20vw;
+    margin-left: 38vw;
+    text-decoration: none;
+  }
+  section {
+    margin: f.rem-calc(15);
+    display: flex;
+    font-size: 1rem;
+
+    article {
+      border: f.rem-calc(1) solid module.$color-secondary;
+      text-align: center;
+      color: module.$color-tertiary;
+      &:nth-child(even) {
+        color: module.$color-primary;
+      }
+    }
+    &.footer_section {
+      justify-content: center;
+      display: flex;
+      article {
+        @include article-card(
+          module.$color-secondary,
+          module.$color-tertiary,
+          24px
+        );
+        padding: f.rem-calc(10) f.rem-calc(5);
+        width: 100%;
+      }
+    }
+    &.container {
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        width: f.rem-calc(45);
+        height: f.rem-calc(45);
+      }
+    }
+  }
+}
+
+$fontSizes: 1rem, 2rem, 3rem;
+
+@each $fontSize in $fontSizes {
+  .fs-#{$fontSize} {
+    font-size: $fontSize;
+  }
+}
+@for $i from 1 to 20 {
+  div {
+    section {
+    &.container div:nth-child(#{$i}) {
+        background-color: darken(white, calc($i * 5));
+        color: lighten($color: #000000, $amount: calc($i * 5));
+        @if $i == 10 {
+            color: red;
+            background-color: blue;
+        }
+      }
+    }
+  }
+}
