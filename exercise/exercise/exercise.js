@@ -6,6 +6,11 @@ const person1 = {
 
 const person2 = person1;
 
+person2.firstName = "Jane";
+
+/* Person1 gets modified as well because person2 
+is not a copy of person1 but is instead a reference to person1 */
+
 // Modify the property `firstName` of the `person2` in "Simon".
 
 console.log(person1);
