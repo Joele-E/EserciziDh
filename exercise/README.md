@@ -1,6 +1,6 @@
 # instanceof Operator
 
-Define a class called `AreaCalculator`. Inside it, create a static method that let you calculate the area of the geometric figure passed as parameter. The method will let you calculate the square, the rectangle and the circle area.
+Define a class called `AreaCalculator`. Inside it, create a static method that lets you calculate the area of the geometric figure passed as parameter. The method will let you calculate the square, the rectangle and the circle area.
 
 class Square {
 constructor(side) {
