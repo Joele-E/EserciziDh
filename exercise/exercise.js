@@ -1,15 +1,16 @@
 const person = {
   id: 1,
-  firstName: 'Mario',
-  lastName: 'Rossi',
-  age: 25
+  firstName: "Mario",
+  lastName: "Rossi",
+  age: 25,
 };
 
-const id = person.id;
+const { id, firstName, lastName, age } = { ...person };
+
 const personInfo = {
-  firstName: person.firstName,
-  lastName: person.lastName,
-  age: person.age
+  firstName: firstName,
+  lastName: lastName,
+  age: age,
 };
 
 console.log(id, personInfo);
