@@ -1,0 +1,27 @@
+<html>
+
+<body>
+  <div id="container" style="display: flex; flex-flow: column nowrap; align-items: center;">
+    <h1>TODOS</h1>
+    <ul id="todo-list"></ul>
+  </div>
+</body>
+
+</html>
+
+<script>
+  let url = 'https://jsonplaceholder.typicode.com/todos';
+  function appendTodo(todo) {
+    let list = document.getElementById('todo-list');
+    let todoTitle = todo.title;
+    let br = document.createElement('br');
+    list.append(todoTitle, br);
+  }
+
+  fetch(url)
+    .then((res) => res.json())
+    .then((arr) => arr.forEach(element => {
+      appendTodo(element);
+    }))
+    .catch((err) => console.log(err));
+</script>
