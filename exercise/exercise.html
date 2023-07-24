@@ -15,7 +15,7 @@
     let list = document.getElementById('todo-list');
     let todoTitle = todo.title;
     let br = document.createElement('br');
-    list.append(todoTitle, br);
+    list.append(' - ' + todoTitle, br);
   }
 
   fetch(url)
