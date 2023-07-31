@@ -3,9 +3,38 @@
 <body>
   <div id="container" style="display: flex; align-items: center;"></div>
 </body>
+<h2 id="todo-title"></h2>
+<Input Type="Checkbox" id="my-checkbox">
 
 </html>
 
 <script>
+  let url = 'https://jsonplaceholder.typicode.com/todos/4';
+  function appendTodo(todo) {
+    console.log(todo);
+    let todoTitle = document.getElementById('todo-title');
+    let checkBox = document.getElementById('my-checkbox')
+    todoTitle.style.textTransform = 'capitalize'
+    todoTitle.innerHTML = todo.title;
+    if (todo.completed) {
+      checkBox.checked = true;
+    }
+
+    else {
+      checkBox.checked = false;
+
+    }
+
+
+    /* let list = document.getElementById('todo-list');
+    let todoTitle = todo.title;
+    let br = document.createElement('br');
+    list.append(' - ' + todoTitle, br); */
+  }
+
+  fetch(url)
+    .then((res) => res.json())
+    .then((json) => appendTodo(json))
+    .catch((err) => console.log(err));
 
 </script>
