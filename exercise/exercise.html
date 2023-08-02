@@ -1,22 +1,43 @@
 <html>
-  <body>
-    <div id="container">
-      <form>
-        <div>
-          <label>Title</label>
-          <input type="text" id="todo-title" />
-        </div>
-        <div>
-          <label>Completed</label>
-          <input type="checkbox" id="todo-completed" />
-        </div>
 
-        <button type="submit" id="submit-todo"></button>
-      </form>
-    </div>
-  </body>
+<body>
+  <div id="container">
+    <form>
+      <div>
+        <label>Title</label>
+        <input type="text" id="todo-title" />
+      </div>
+      <div>
+        <label>Completed</label>
+        <input type="checkbox" id="todo-completed" />
+      </div>
+
+      <button onclick="myFunc()" id="submit-todo" style="margin-top: 20px;" type="button">INVIA</button>
+    </form>
+  </div>
+</body>
+
 </html>
 
 <script>
-  // code here
+  async function myFunc() {
+    let url = 'https://jsonplaceholder.typicode.com/posts)';
+    let title = document.getElementById('todo-title');
+    let cb = document.getElementById('todo-completed');
+    let data = { 'title': title.value, 'completed': cb.checked };
+    await fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data),
+
+
+
+    }).then(res => res.json()).then(json => console.log(json)).catch(err => console.error(err))
+
+    /* console.log(title.value) */
+
+  }
+
+
+
+
 </script>
